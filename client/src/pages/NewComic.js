@@ -6,7 +6,7 @@ import { Button, Error, FormField, Input, Label, Textarea } from "../styles";
 
 function NewComic({ user }) {
   const [title, setTitle] = useState("Enter Comic Title Here");
-  const [img_url, setImgUrl] = useState("Add an Image Link")
+  const [img_url, setImgUrl] = useState("Add an Image Link");
   const [price, setPrice] = useState("30.00");
   const [description, setDescription] = useState("Add a Description");
   const [creators, setCreators] = useState("Add the Creator(s)");
@@ -83,7 +83,6 @@ function NewComic({ user }) {
             id="price"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
-            // onClick={() => setPrice("")}
             />
           </FormField>
           <FormField>
