@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import PublicComicLink from "../components/PublicComicLink";
+import ComicLink from "../components/ComicLink";
 import { Button } from "../styles";
 
-function AllComicsList() {
+function ComicList() {
   const [comics, setComics] = useState([]);
 
   useEffect(() => {
-    fetch("/allcomics")
+    fetch("/comics")
       .then((r) => r.json())
       .then(setComics);
   }, []);
@@ -17,7 +17,7 @@ function AllComicsList() {
     <Wrapper>
       {comics.length > 0 ? (
         comics.map((comic) => (
-          <PublicComicLink key={comic.id} comic={comic}/>
+          <ComicLink key={comic.id} comic={comic}/>
         ))
       ) : (
         <>
@@ -36,4 +36,4 @@ const Wrapper = styled.section`
   margin: 40px auto;
 `;
 
-export default AllComicsList;
+export default ComicList;
