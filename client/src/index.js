@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
 ReactDOM.render(
   <BrowserRouter>
     <GlobalStyle />
-    <App />
+      <App />
   </BrowserRouter>,
   document.getElementById('root')
 );
