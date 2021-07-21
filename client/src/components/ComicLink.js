@@ -5,7 +5,7 @@ import '../App.css';
 
 
 const ComicLink = ({comic}) => {
-  // console.log(comic)
+
     return (
         <div>
             <Link to={`/comics/${comic.id}`}>
