@@ -35,7 +35,7 @@ class ComicsController < ApplicationController
     def marvel_index
         if session[:user_id]
             comics = Comic.publisher
-            render json: comics
+            render json: comics, include: :user
         else
             render json: { errors: [ "Not Authorized" ]}, status: :unauthorized
         end
