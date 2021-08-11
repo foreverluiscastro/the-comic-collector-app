@@ -10,6 +10,7 @@ To run the app locally, install Rails and React dependencies and set up the data
 bundle install
 rails db:create db:migrate
 npm install --prefix client
+sudo service postgresql start
 ```
 ## Running the App locally
 
